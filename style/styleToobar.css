@@ -7,7 +7,8 @@
 .toolBarMagens{
     margin: 5% ;
     position: fixed;
-    top: 90%;
+    top: 91%;
+    background-color: #f6f6f6;
 }
 .iconToobar{
     width: 20%;
@@ -15,6 +16,6 @@
 }
 
 .fotoToobar{
-    width: 45%;
+    width: 50%;
 }
 
