@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site com Bootstrap</title>
+
+    <!-- Importando o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/styleFeed.css">
+    <link rel="stylesheet" href="style/styleToobar.css">
+    <!-- font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="d-flex justify-content-start m-3">
+            <img class="rounded-circle" id="smallCircle" alt="avatar1" 
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" />
+                <!-- Input pesquisa -->
+                <div class="input-group border rounded-pill" id="boxPesquisa">
+                    <div class="input-group-prepend">
+                      <button type="button" class="btn btn-link text-info mt-1"><i class="fa fa-search"></i></button>
+                    </div>
+                    <input type="search" placeholder="Buscar" aria-describedby="button-addon4" class="form-control bg-none border-0">
+                    <div class="input-group-prepend">
+                        <button type="button" class="btn btn-link text-info mt-1"><img src="img/iconFilter.png"></button>
+                    </div>
+                </div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="conteudo">
+            <div id="posts">
+            <!-- Posts -->
+            </div>
+        </div>
+
+        <a href="#" class="fixed-btn">+</a>
+
+        <!-- Toobar -->
+        <div class="row justify-content-between toolBarMagens">
+            <div class="dividerToobar"></div>
+            <div class="col-3 d-flex justify-content-center iconToobar">
+                <img src="img/home.png" alt="">
+            </div>
+            <div class="col-3 d-flex justify-content-center iconToobar">
+                <img src="img/Search.png" alt="">
+            </div>
+            <div class="col-3 d-flex justify-content-center iconToobar">
+                <img src="img/notification.png" alt="">
+              </div>
+            <div class="col-3 d-flex justify-content-center iconToobar">
+                <img class="rounded-circle fotoToobar" alt="avatar1" 
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" />
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+
+        for(i=1; i<=2;i++){
+            switch(i){
+                case 1:
+                    ItensPost('Hosp Mun Antônio Giglio', '2 d', 'Precisa-se urgente de cardiologista especialista em infarto para tratamento no hospital.', 'BG ')
+                    break;
+                case 2:
+                    ItensPost('Julia Monsato', '1 sem', 'Sera que algum dermato especialista em Câncer de Pele poderia me ajudar em um caso', 'FE')
+                    break;
+                default:
+                    alert('erro')
+            }
+        }
+
+        //#funtion para add um post
+        function ItensPost(criador, data, text, imgPerfil){
+            const posts = document.getElementById('posts') 
+
+            const rowPost = document.createElement('div')
+            rowPost.classList.add('row')
+            rowPost.classList.add('mt-4')
+
+
+            const colPerfil = document.createElement('div')
+            colPerfil.classList.add('col-2')
+
+            //#Adiconar opção de receber foto
+            const foto = document.createElement('div')
+            foto.classList.add('circle')
+            foto.innerText = imgPerfil
+
+            const colTexte = document.createElement('div')
+            colTexte.classList.add('col-10')
+
+            //#limitar chars
+            const criadorPost = document.createElement('h5')
+            criadorPost.classList.add('textTitleItem')
+            criadorPost.innerText = criador
+
+            const dataPost = document.createElement('h7')
+            dataPost.classList.add('text-secondary')
+            dataPost.innerText = data
+
+            const brakLine = document.createElement('br')
+
+            const textPost = document.createElement('h7')
+            textPost.innerText = text
+
+            const rowIcons = document.createElement('div')
+            rowIcons.classList.add('row')
+            rowIcons.classList.add('justify-content-between')
+            rowIcons.classList.add('margens')
+
+            const BoxIconLike=document.createElement('div');
+            BoxIconLike.classList.add('col')
+
+            const BoxIconCommente=document.createElement('div');
+            BoxIconCommente.classList.add('col')
+
+            const BoxIconShere=document.createElement('div');
+            BoxIconShere.classList.add('col')
+            
+            const iconLike=document.createElement('img');
+            iconLike.src="img/like.png"
+
+            const iconCommente=document.createElement('img');
+            iconCommente.src="img/comment.png"
+
+            
+            const iconShere=document.createElement('img');
+            iconShere.src="img/share.png"
+        
+            const dividerPost=document.createElement('div');
+            dividerPost.classList.add('dividerPost')
+
+            posts.appendChild(rowPost)
+
+            rowPost.appendChild(colPerfil)
+            colPerfil.appendChild(foto)
+            rowPost.appendChild(colTexte)
+
+            colTexte.appendChild(criadorPost)  
+            colTexte.appendChild(dataPost)  
+            colTexte.appendChild(brakLine)  
+            colTexte.appendChild(textPost)
+
+            posts.appendChild(rowIcons)
+            rowIcons.appendChild(BoxIconLike).appendChild(iconLike)
+            rowIcons.appendChild(BoxIconCommente).appendChild(iconCommente)
+            rowIcons.appendChild(BoxIconShere).appendChild(iconShere)
+            posts.appendChild(dividerPost)
+        }
+    </script>
+</body>
+
+</html>

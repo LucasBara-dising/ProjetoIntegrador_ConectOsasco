@@ -1,0 +1,20 @@
+.dividerToobar{
+    width: 100%;
+    height: 6px;
+    background-color: #f6f6f6; 
+}
+
+.toolBarMagens{
+    margin: 5% ;
+    position: fixed;
+    top: 90%;
+}
+.iconToobar{
+    width: 20%;
+    padding: 5% 2%;
+}
+
+.fotoToobar{
+    width: 45%;
+}
+

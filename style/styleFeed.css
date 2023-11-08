@@ -1,0 +1,91 @@
+*{
+    font-family: 'Karla', sans-serif;
+}
+.container{
+    margin: 0%;
+    padding: 0%;
+}
+
+#smallCircle{
+    width: 14%;
+    margin-top: 5%;
+}
+
+#boxPesquisa{
+    width: 80%;
+    height: 5vh;
+    margin:7% 10% 0% 5%;
+}
+
+input[type="search"]{
+    padding: 1%;
+    height: 100%;
+}
+
+#button-addon4{
+    width: 100%;
+    margin-top: 15%;
+}
+
+.conteudo{
+    margin: 0% 5%;
+}
+
+.divider{
+    width: 100%;
+    height: 12px;
+    background-color: #f6f6f6; 
+}
+
+.col-2{
+    padding:0px 8px;
+}
+
+.circle{
+    width: 100%;
+    height: 6vh;
+    max-height: 6vh;
+    border-radius: 50%;
+    background-color: #005D7A;
+    color: aliceblue;
+    padding: 28%;
+}
+
+.textTitleItem{
+    font-weight: bold;
+    padding: 0% 0% 0% 0%;
+    margin: 0%;
+}
+
+.textPost{
+    margin-bottom: 10%;
+}
+
+.dividerPost{
+    width: 100%;
+    height: 6px;
+    background-color: #f6f6f6; 
+}
+
+.margens{
+    margin: 4% 10% 2% 20%;
+}
+
+.fixed-btn{
+    display:block;
+    position:absolute;
+    right:5%;
+    top:84%;
+    padding: 5%;
+    height:7%;
+    width:14%;
+    border-radius:50%;
+    background: #005D7A;
+    color:#fff;
+    text-align:center;
+    text-decoration:none;
+}
+
+.fixed-btn.fixed{
+    position:fixed;
+}
