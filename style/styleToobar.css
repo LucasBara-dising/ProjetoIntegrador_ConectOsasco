@@ -5,13 +5,15 @@
 }
 
 .toolBarMagens{
-    margin: 5% ;
+    width: 100%;
+    margin: 5% 0%;
+    padding: 0% 5%;
     position: fixed;
     top: 91%;
     background-color: #f6f6f6;
 }
 .iconToobar{
-    width: 20%;
+    width: 16%;
     padding: 5% 2%;
 }
 

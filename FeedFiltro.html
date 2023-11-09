@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site com Bootstrap</title>
+
+    <!-- Importando o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/styleFeedFiltro.css">
+    <!-- font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="d-flex justify-content-start m-2">
+            <img id="smallImg" alt="x" 
+                src="img/seta-esquerda 1.png" onclick="Abrefeed()"/>
+                <!-- Input pesquisa -->
+                <div class="boxTitle">
+                    <h1>Filtro</h1>
+                </div>
+        
+        </div>
+        <div class="divider"></div>
+
+        <div class="conteudo">
+            <div id="feedfiltro">
+            <!-- Posts -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="js/AbreTelas.js"></script>
+    <script>
+
+        for(i=1; i<=5;i++){
+            switch(i){
+                case 1:
+                    ItensPost('Julia Monsato.','Demartologista',  'JM')
+                    break;
+                case 2:
+                    ItensPost('Julho Fernande','Demartologista, especialista em vitiligo', 'JM')
+                    break;
+                case 3:
+                    ItensPost('Julio Katantra','Demartologista', 'Jk')
+                    break;
+                case 4:
+                    ItensPost('Juvencio Fernando','Demartologista,', 'JF')
+                    break;
+                case 5:
+                    ItensPost('Julio Macedo.','Demartologista, especialista em Cancer ', 'JM')
+                    break;
+                default:
+                    alert('erro')
+            }
+        }
+
+        //#funtion para add um post
+        function ItensPost(nomeUser, text, imgPerfil){
+            const feedFiltro = document.getElementById('feedfiltro') 
+
+            const rowPost = document.createElement('div')
+            rowPost.classList.add('row')
+            rowPost.classList.add('mt-4')
+
+            const colPerfil = document.createElement('div')
+            colPerfil.classList.add('col-2')
+
+            //#Adiconar opção de receber foto
+            const foto = document.createElement('div')
+            foto.classList.add('circle')
+            foto.innerText = imgPerfil
+
+            const colTexte = document.createElement('div')
+            colTexte.classList.add('col-10')
+
+            //#limitar chars
+            const nomeItem = document.createElement('h5')
+            nomeItem.classList.add('textTitleItem')
+            nomeItem.innerText = nomeUser
+
+            const exepItem = document.createElement('h7')
+            exepItem.innerText = text
+
+    
+            const dividerPost=document.createElement('div');
+            dividerPost.classList.add('dividerPost')
+
+            feedFiltro.appendChild(rowPost)
+
+            rowPost.appendChild(colPerfil)
+            colPerfil.appendChild(foto)
+            rowPost.appendChild(colTexte)
+
+            colTexte.appendChild(nomeItem)  
+            colTexte.appendChild(exepItem)
+
+            feedFiltro.appendChild(dividerPost)
+        }
+    </script>
+</body>
+
+</html>
