@@ -21,44 +21,46 @@
 
     <div class="container">
         <div class="d-flex justify-content-start m-3">
-            <img class="rounded-circle" id="smallCircle" alt="avatar1" 
+            <img class="rounded-circle" id="smallCircle" alt="avatar1"
                 src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" />
-                <!-- Input pesquisa -->
-                <div class="input-group border rounded-pill" id="boxPesquisa">
-                    <div class="input-group-prepend">
-                      <button type="button" class="btn btn-link text-info mt-1"><i class="fa fa-search"></i></button>
-                    </div>
-                    <input type="search" placeholder="Buscar" aria-describedby="button-addon4" class="form-control bg-none border-0">
-                    <div class="input-group-prepend">
-                        <button type="button" class="btn btn-link text-info mt-1"><img src="img/iconFilter.png"></button>
-                    </div>
+            <!-- Input pesquisa -->
+            <div class="input-group border rounded-pill" id="boxPesquisa">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-link text-info mt-1"><i class="fa fa-search"></i></button>
                 </div>
+                <input type="search" placeholder="Buscar" aria-describedby="button-addon4"
+                    class="form-control bg-none border-0">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-link text-info mt-1" onclick="AbreFiltro()"><img
+                            src="img/iconFilter.png"></button>
+                </div>
+            </div>
         </div>
         <div class="divider"></div>
 
         <div class="conteudo">
             <div id="posts">
-            <!-- Posts -->
+                <!-- Posts -->
             </div>
         </div>
 
-        <a href="#" class="fixed-btn">+</a>
+        <a href="#" onclick="AbreNewPost()" class="fixed-btn">+</a>
 
-       <!-- Toobar -->
+        <!-- Toobar -->
         <div class="row justify-content-between toolBarMagens">
             <div class="dividerToobar"></div>
             <div class="col-3 d-flex justify-content-center iconToobar" onclick="Abrefeed()">
                 <img src="img/home.png" alt="">
             </div>
-            <div class="col-3 d-flex justify-content-center iconToobar">
+            <div class="col-3 d-flex justify-content-center iconToobar" onclick="AbreNewPost()">
                 <img src="img/Search.png" alt="">
             </div>
             <div class="col-3 d-flex justify-content-center iconToobar">
                 <img src="img/notification.png" alt="">
             </div>
             <div class="col-3 d-flex justify-content-center iconToobar" onclick="AbrePerfil()">
-                <img class="rounded-circle fotoToobar" alt="avatar1" 
-                src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" />
+                <img class="rounded-circle fotoToobar" alt="avatar1"
+                    src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" />
             </div>
         </div>
 
@@ -69,8 +71,8 @@
     <script src="js/AbreTelas.js"></script>
     <script>
 
-        for(i=1; i<=2;i++){
-            switch(i){
+        for (i = 1; i <= 2; i++) {
+            switch (i) {
                 case 1:
                     ItensPost('Hosp Mun Antônio Giglio', '2 d', 'Precisa-se urgente de cardiologista especialista em infarto para tratamento no hospital.', 'BG ')
                     break;
@@ -83,8 +85,8 @@
         }
 
         //#funtion para add um post
-        function ItensPost(criador, data, text, imgPerfil){
-            const posts = document.getElementById('posts') 
+        function ItensPost(criador, data, text, imgPerfil) {
+            const posts = document.getElementById('posts')
 
             const rowPost = document.createElement('div')
             rowPost.classList.add('row')
@@ -121,26 +123,26 @@
             rowIcons.classList.add('justify-content-between')
             rowIcons.classList.add('margens')
 
-            const BoxIconLike=document.createElement('div');
+            const BoxIconLike = document.createElement('div');
             BoxIconLike.classList.add('col')
 
-            const BoxIconCommente=document.createElement('div');
+            const BoxIconCommente = document.createElement('div');
             BoxIconCommente.classList.add('col')
 
-            const BoxIconShere=document.createElement('div');
+            const BoxIconShere = document.createElement('div');
             BoxIconShere.classList.add('col')
-            
-            const iconLike=document.createElement('img');
-            iconLike.src="img/like.png"
 
-            const iconCommente=document.createElement('img');
-            iconCommente.src="img/comment.png"
+            const iconLike = document.createElement('img');
+            iconLike.src = "img/like.png"
 
-            
-            const iconShere=document.createElement('img');
-            iconShere.src="img/share.png"
-        
-            const dividerPost=document.createElement('div');
+            const iconCommente = document.createElement('img');
+            iconCommente.src = "img/comment.png"
+
+
+            const iconShere = document.createElement('img');
+            iconShere.src = "img/share.png"
+
+            const dividerPost = document.createElement('div');
             dividerPost.classList.add('dividerPost')
 
             posts.appendChild(rowPost)
@@ -149,9 +151,9 @@
             colPerfil.appendChild(foto)
             rowPost.appendChild(colTexte)
 
-            colTexte.appendChild(criadorPost)  
-            colTexte.appendChild(dataPost)  
-            colTexte.appendChild(brakLine)  
+            colTexte.appendChild(criadorPost)
+            colTexte.appendChild(dataPost)
+            colTexte.appendChild(brakLine)
             colTexte.appendChild(textPost)
 
             posts.appendChild(rowIcons)

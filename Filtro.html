@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site com Bootstrap</title>
+
+    <!-- Importando o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/styleFiltro.css">
+    <!-- font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <img id="closeIcon" alt="x" src="img/close.png" onclick="Abrefeed()" />
+    <div class="container">
+        <div class="d-flex justify-content-start m-2">
+
+            <!-- Input pesquisa -->
+            <div class="input-group border rounded-pill" id="boxPesquisa">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-link text-info mt-1"><i class="fa fa-search"></i></button>
+                </div>
+                <input type="search" placeholder="nome, idade, cargo, especializ..." aria-describedby="button-addon4"
+                    class="form-control bg-none border-0">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-link text-info mt-1"></button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="conteudo">
+            <h3 class="textTitleItem mt-4">Formação</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Formado</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">Pos-Graduado</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">Doutorado</label>
+            </div>
+
+
+            <h3 class="textTitleItem mt-5">Experiência</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Medico Plantonista</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">Cirurgião</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">Clinico</label>
+            </div>
+
+            <a onclick="AbreFeedFiltro()" class="fixed-btn">Pesquisar</a>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="js/AbreTelas.js"></script>
+</body>
+
+</html>
