@@ -10,7 +10,7 @@ body{
     position: absolute;
     height: 90%;
     top: 10%;
-    background-color: #f6f6f6;
+    background-color: #fff;
     border-radius: 50px 50px 0px 0px;
     margin: 0%;
     padding: 0%;
@@ -26,7 +26,9 @@ body{
     height: 6vh;
     margin:5% 8%;
     padding: 1%;
+    background-color: #f6f6f6;
 }
+
 
 .conteudo{
     margin: 0% 5%;
